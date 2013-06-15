@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+    <metadata>
+        <id>$id$</id>
+        <version>$version$</version>
+        <title>$title$</title>
+        <authors>Andre Van Der Merwe</authors>
+        <owners>Andre Van Der Merwe</owners>
+        <projectUrl>https://github.com/andrevdm/NetTp</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Messaging and erlang inspired supervision</description>
+        <releaseNotes>Initial version</releaseNotes>
+        <copyright>Copyright 2013</copyright>
+        <tags>sbin</tags>
+    </metadata>
+
+
+    <files>
+        <file src="..\..\_build\Debug\Avdm.NetTp.GridExplorer.exe" target="lib\net40" /> 
+    </files>        
+</package>

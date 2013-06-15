@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D33F21C-13DE-4F04-AA35-AE903F867DFC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Avdm.NetTp</RootNamespace>
+    <AssemblyName>Avdm.NetTp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\_build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Avdm.Config">
+      <HintPath>..\packages\Avdm.Config.1.0.0.30828\lib\net45\Avdm.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="Avdm.Core, Version=1.1.1.32631, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Avdm.Core.1.1.1.32631\lib\net45\Avdm.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Avdm.Deploy.Manager, Version=1.1.0.28379, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\sbin.1.1.0.28378\lib\net40\Avdm.Deploy.Manager.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=2.1.2.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Binaries\Quartz.Impl.MongoDB\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyNetQ">
+      <HintPath>..\packages\EasyNetQ.0.10.0.84\lib\net40\EasyNetQ.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyNetQ.Management.Client">
+      <HintPath>..\packages\EasyNetQ.Management.Client.0.10.0.84\lib\net40\EasyNetQ.Management.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.8.1\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.8.1\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy">
+      <HintPath>..\packages\Nancy.0.17.1\lib\net40\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Authentication.Basic">
+      <HintPath>..\packages\Nancy.Authentication.Basic.0.17.1\lib\net40\Nancy.Authentication.Basic.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self">
+      <HintPath>..\packages\Nancy.Hosting.Self.0.17.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+    </Reference>
+    <Reference Include="NCrontab">
+      <HintPath>..\packages\ncrontab.1.0.0\lib\NCrontab.dll</HintPath>
+    </Reference>
+    <Reference Include="NDesk.Options">
+      <HintPath>..\packages\NDesk.Options.0.2.1\lib\NDesk.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=2.1.2.400, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Binaries\Quartz.Impl.MongoDB\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz.Impl.MongoDB, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Binaries\Quartz.Impl.MongoDB\Quartz.Impl.MongoDB.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\packages\RabbitMQ.Client.3.0.2\lib\net30\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="sbin, Version=1.1.0.28378, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\sbin.1.1.0.28378\lib\net40\sbin.exe</HintPath>
+    </Reference>
+    <Reference Include="SharedCache.WinServiceCommon">
+      <HintPath>..\..\Binaries\SharedCache\SharedCache.WinServiceCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Sider">
+      <HintPath>..\packages\Sider.0.9.2\lib\net40-Client\Sider.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\StandardInitialiser.cs" />
+    <Compile Include="Core\RedisProcessHistory.cs" />
+    <Compile Include="Grid\Config\ConfigHotSwapNodeWorker.cs" />
+    <Compile Include="Grid\Config\ConfigNodeFactory.cs" />
+    <Compile Include="Grid\Config\INodeConfigPersistor.cs" />
+    <Compile Include="Grid\Config\NodeConfig.cs" />
+    <Compile Include="Grid\Config\NodeConfigMongoMap.cs" />
+    <Compile Include="Grid\Config\NodeConfigPersistor.cs" />
+    <Compile Include="Grid\Config\NodeProcessChildConfig.cs" />
+    <Compile Include="Grid\Nodes\INodeWorker.cs" />
+    <Compile Include="Grid\Pool\HotSwappableHandlers.cs" />
+    <Compile Include="Grid\Pool\IHandleCommand.cs" />
+    <Compile Include="Grid\Pool\IHotSwapHandlerStrategy.cs" />
+    <Compile Include="Grid\Pool\IHotSwappableHandlerContainer.cs" />
+    <Compile Include="Grid\Pool\IHotSwappableHandlerLoader.cs" />
+    <Compile Include="Grid\Pool\SbinAutoUpdateFileWatcherWorker.cs" />
+    <Compile Include="Grid\Pool\SbinFilesUpdatedEventMessage.cs" />
+    <Compile Include="Grid\Pool\SbinUpdateHotSwapHandlerStrategy.cs" />
+    <Compile Include="Grid\Pool\ScanLoadedAssembliesForHandlersLoader.cs" />
+    <Compile Include="Grid\Pool\SwappablePoolInfo.cs" />
+    <Compile Include="Grid\Pool\HotSwappableHandlerPool.cs" />
+    <Compile Include="Grid\Nodes\DefaultNodeResponsabilityProvider.cs" />
+    <Compile Include="Grid\Executors\NodeProcessExecutor.cs" />
+    <Compile Include="Grid\Nodes\INodeFinder.cs" />
+    <Compile Include="Grid\Nodes\INodeRemoteControl.cs" />
+    <Compile Include="Grid\Nodes\INodeResponsabilityProvider.cs" />
+    <Compile Include="Grid\Nodes\NodeLogging.cs" />
+    <Compile Include="Grid\Nodes\NodeLoggingEventMessage.cs" />
+    <Compile Include="Grid\Nodes\NodeRemoteControl.cs" />
+    <Compile Include="Grid\NodeResponsibilityHandlers\NodeHeartbeatHandler.cs" />
+    <Compile Include="Grid\NodeResponsibilityHandlers\NodeLoggingHandler.cs" />
+    <Compile Include="Grid\NodeResponsibilityHandlers\NodeRemoteControlHandler.cs" />
+    <Compile Include="Grid\NodeResponsibilityHandlers\RemoteShutdownNodeEventMessage.cs" />
+    <Compile Include="Core\SingleMachineGlobalInstance.cs" />
+    <Compile Include="Grid\Nodes\RedisNodeFinder.cs" />
+    <Compile Include="Grid\Triad\ApplicationNode.cs" />
+    <Compile Include="Grid\Triad\TriadPrimaryNode.cs" />
+    <Compile Include="Grid\Triad\TriadRunnable.cs" />
+    <Compile Include="Grid\Triad\TriadSecondaryNode.cs" />
+    <Compile Include="Messaging\EasyNetQNullLogger.cs" />
+    <Compile Include="Grid\Executors\ExecutorExitedEventArgs.cs" />
+    <Compile Include="Grid\Executors\IExecutor.cs" />
+    <Compile Include="Grid\Executors\IExecutorInfo.cs" />
+    <Compile Include="Grid\Nodes\NodeActions.cs" />
+    <Compile Include="Grid\NodeResponsibilityHandlers\NodeMonitorHandler.cs" />
+    <Compile Include="Grid\NodeResponsibilityHandlers\NodeMonitorUpdateEventMessage.cs" />
+    <Compile Include="Grid\SupervisionStrategies\ChildRestartDelayer.cs" />
+    <Compile Include="Grid\SupervisionStrategies\ImortalNodeSupervisionStrategy.cs" />
+    <Compile Include="Grid\Nodes\INodeFactory.cs" />
+    <Compile Include="Core\IProcessHistory.cs" />
+    <Compile Include="Grid\Executors\NodeExecutor.cs" />
+    <Compile Include="Grid\Nodes\NodeExitAction.cs" />
+    <Compile Include="Grid\RestartStrategies\NodeRestartStrategy.cs" />
+    <Compile Include="Grid\SupervisionStrategies\NodeSupervisionStrategy.cs" />
+    <Compile Include="Grid\Nodes\NodeWorkerStrategy.cs" />
+    <Compile Include="Grid\RestartStrategies\OneForAllNodeRestartStrategy.cs" />
+    <Compile Include="Grid\RestartStrategies\OneForOneNodeRestartStrategy.cs" />
+    <Compile Include="Grid\SupervisionStrategies\PermanentNodeSupervisionStrategy.cs" />
+    <Compile Include="Grid\Executors\ProcessExecutor.cs" />
+    <Compile Include="Grid\RestartStrategies\RestForOneNodeRestartStrategy.cs" />
+    <Compile Include="Grid\Nodes\RunnableNode.cs" />
+    <Compile Include="Core\SharedCacheProcessHistory.cs" />
+    <Compile Include="Grid\SupervisionStrategies\TemporaryNodeSupervisionStrategy.cs" />
+    <Compile Include="Grid\SupervisionStrategies\TransientNodeSupervisionStrategy.cs" />
+    <Compile Include="Messaging\EasyNetQBusImpl.cs" />
+    <Compile Include="Messaging\InProcMessageBusImpl.cs" />
+    <Compile Include="Messaging\INetTpCommandMessage.cs" />
+    <Compile Include="Messaging\INetTpEventMessage.cs" />
+    <Compile Include="Messaging\INetTpMessage.cs" />
+    <Compile Include="Messaging\INetTpMessageBus.cs" />
+    <Compile Include="Messaging\INetTpMessageBusImpl.cs" />
+    <Compile Include="Messaging\INetTpRpcRequestMessage.cs" />
+    <Compile Include="Messaging\INetTpRpcResponseMessage.cs" />
+    <Compile Include="Messaging\NetTpMessageBus.cs" />
+    <Compile Include="Grid\Nodes\Node.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

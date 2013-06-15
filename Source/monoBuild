@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#sudo mozroots --import --machine --sync  --ask-remove
+#sudo certmgr -ssl -m https://go.microsoft.com
+#sudo certmgr -ssl -m https://nugetgallery.blob.core.windows.net
+#sudo certmgr -ssl -m https://nuget.org
+
+git reset HEAD --hard
+git pull origin master
+export EnableNuGetPackageRestore=true
+mono ./makeMonoProjectsAndSln.exe Pcubed.Framework.sln
+xbuild /p:TargetFrameworkProfile="" Pcubed.Framework.mono.sln
+

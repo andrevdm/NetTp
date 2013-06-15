@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Grid Explorer</title>
+    <script language="javascript" type="text/javascript" src="/grid/resources/jquery-2.0.0.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/grid/resources/jsTree/jquery.jstree.js"></script>
+</head>
+<body>
+    Grid explorer     
+        
+    <div id="tree">
+    </div>
+
+
+    <script language="javascript">
+
+        $(function () {
+
+            $("#tree")
+                .jstree({
+                    "json_data": {
+                        "ajax": {
+                            "url": "/grid/topology",
+                            "data": function(n) {
+                                return { id: n.attr ? n.attr("id") : 0 };
+                            }
+                        }
+                    },
+                    "plugins": ["themes", "json_data", "ui", "crrm"], //, "hotkeys"
+                    "core": { "initially_open": ["phtml_1"] }
+                })
+                .bind("loaded.jstree", function(event, data) {
+                    $("#tree").jstree('open_all');
+                })
+                .bind("select_node.jstree", function (event, data) {
+                    console.log("Bind Result: " + data.inst.get_json()[0].data.icon );
+                });
+        });
+    </script>
+</body>
+</html>

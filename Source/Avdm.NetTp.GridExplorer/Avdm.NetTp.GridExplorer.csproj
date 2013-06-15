@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEF8772B-F056-4D9E-ACAC-8E7ADAAEB7B9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Avdm.NetTp.GridExplorer</RootNamespace>
+    <AssemblyName>Avdm.NetTp.GridExplorer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\_build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Avdm.Config, Version=1.0.0.30828, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Avdm.Config.1.0.0.30828\lib\net45\Avdm.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="Avdm.Core, Version=1.1.1.32631, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Avdm.Core.1.1.1.32631\lib\net45\Avdm.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Avdm.Deploy.Manager, Version=1.1.0.28379, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\sbin.1.1.0.28378\lib\net40\Avdm.Deploy.Manager.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyNetQ">
+      <HintPath>..\packages\EasyNetQ.0.10.0.84\lib\net40\EasyNetQ.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy">
+      <HintPath>..\packages\Nancy.0.17.1\lib\net40\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Authentication.Basic">
+      <HintPath>..\packages\Nancy.Authentication.Basic.0.17.1\lib\net40\Nancy.Authentication.Basic.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self">
+      <HintPath>..\packages\Nancy.Hosting.Self.0.17.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\packages\RabbitMQ.Client.3.0.2\lib\net30\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="sbin, Version=1.1.0.28378, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\sbin.1.1.0.28378\lib\net40\sbin.exe</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GridExplorerBootstrapper.cs" />
+    <Compile Include="GridNancyModuleBase.cs" />
+    <Compile Include="GridProgram.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GridModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-2.0.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\jsTree\jquery.jstree.js" />
+    <EmbeddedResource Include="Resources\jsTree\themes\apple\bg.jpg" />
+    <EmbeddedResource Include="Resources\jsTree\themes\apple\d.png" />
+    <EmbeddedResource Include="Resources\jsTree\themes\apple\dot_for_ie.gif" />
+    <EmbeddedResource Include="Resources\jsTree\themes\apple\style.css" />
+    <EmbeddedResource Include="Resources\jsTree\themes\apple\throbber.gif" />
+    <EmbeddedResource Include="Resources\jsTree\themes\classic\d.gif" />
+    <EmbeddedResource Include="Resources\jsTree\themes\classic\d.png" />
+    <EmbeddedResource Include="Resources\jsTree\themes\classic\dot_for_ie.gif" />
+    <EmbeddedResource Include="Resources\jsTree\themes\classic\style.css" />
+    <EmbeddedResource Include="Resources\jsTree\themes\classic\throbber.gif" />
+    <EmbeddedResource Include="Resources\jsTree\themes\default-rtl\d.gif" />
+    <EmbeddedResource Include="Resources\jsTree\themes\default-rtl\d.png" />
+    <EmbeddedResource Include="Resources\jsTree\themes\default-rtl\dots.gif" />
+    <EmbeddedResource Include="Resources\jsTree\themes\default-rtl\style.css" />
+    <EmbeddedResource Include="Resources\jsTree\themes\default-rtl\throbber.gif" />
+    <EmbeddedResource Include="Resources\jsTree\themes\default\d.gif" />
+    <EmbeddedResource Include="Resources\jsTree\themes\default\d.png" />
+    <EmbeddedResource Include="Resources\jsTree\themes\default\style.css" />
+    <EmbeddedResource Include="Resources\jsTree\themes\default\throbber.gif" />
+    <EmbeddedResource Include="Resources\jsTree\_lib\jquery.cookie.js" />
+    <EmbeddedResource Include="Resources\jsTree\_lib\jquery.hotkeys.js" />
+    <EmbeddedResource Include="Resources\jsTree\_lib\jquery.js" />
+    <EmbeddedResource Include="Resources\index.html" />
+    <EmbeddedResource Include="Resources\jquery-2.0.0.min.js" />
+    <Content Include="Scripts\jquery-2.0.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.0.js" />
+    <Content Include="Scripts\jquery-2.0.0.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Avdm.NetTp\Avdm.NetTp.csproj">
+      <Project>{2d33f21c-13de-4f04-aa35-ae903f867dfc}</Project>
+      <Name>Avdm.NetTp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
